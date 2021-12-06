@@ -1,19 +1,19 @@
 package coders;
 
-
-import com.google.gson.Gson;
-import entities.Message;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.websocket.EncodeException;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
+import lombok.SneakyThrows;
+import model.Message;
 
 public class MessageEncoder implements Encoder.Text<Message> {
-    private static Gson gson = new Gson();
+    private static ObjectMapper mapper = new ObjectMapper();
 
+    @SneakyThrows
     @Override
     public String encode(Message message) throws EncodeException {
-       return gson.toJson(message);
+        return mapper.writeValueAsString(message);
     }
 
     @Override

@@ -1,18 +1,18 @@
 package coders;
 
-import com.google.gson.Gson;
-import entities.Message;
-
-import javax.websocket.DecodeException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.websocket.Decoder;
 import javax.websocket.EndpointConfig;
+import lombok.SneakyThrows;
+import model.Message;
 
 public class MessageDecoder implements Decoder.Text<Message> {
-    private static Gson gson = new Gson();
+    private static ObjectMapper mapper = new ObjectMapper();
 
+    @SneakyThrows
     @Override
-    public Message decode(String s) throws DecodeException {
-        return gson.fromJson(s, Message.class);
+    public Message decode(String s) {
+        return mapper.readValue(s, Message.class);
     }
 
     @Override
