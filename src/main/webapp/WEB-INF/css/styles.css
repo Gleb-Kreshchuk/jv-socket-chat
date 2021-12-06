@@ -1,0 +1,29 @@
+.chatbox{
+    display: none;
+}
+.messages {
+    background-color: beige;
+    width: 400px;
+    padding: 10px;
+}
+.messages .msg{
+    background-color: darkkhaki;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.messages .msg .from {
+    background-color: khaki;
+    line-height: 30px;
+    text-align: left;
+    color: midnightblue;
+}
+.messages .msg .text {
+    padding: 10px;
+}
+textarea.msg{
+    width: 420px;
+    padding: 10px;
+    resize: none;
+    border: none;
+    box-shadow: 2px 2px 5px 0 inset;
+}
