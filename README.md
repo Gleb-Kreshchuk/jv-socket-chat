@@ -8,7 +8,7 @@
 ## Features
 - Login
 - View previous messages
-- Send messages
+- Send messages by hitting Enter key
 
 ## Technologies
 - Java 11
@@ -29,4 +29,4 @@
 - Add your credentials to MySQL in ConnectonUtil class (or use default - user: root; password: 1111)
 - Deploy this project using Tomcat server.
 
-![img.png](img.png)
+![img_1.png](img_1.png)
