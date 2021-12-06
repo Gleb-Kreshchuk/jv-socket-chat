@@ -29,4 +29,4 @@
 - Add your credentials to MySQL in ConnectonUtil class (or use default - user: root; password: 1111)
 - Deploy this project using Tomcat server.
 
-![img_1.png](img_1.png)
+![img.png](img.png)
